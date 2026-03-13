@@ -2,28 +2,37 @@
 {% load static %}
 
 {% block content %}
-<form>
-  <div class="card" style="max-width: 60%;">
-    <div class="card-header">
-      <strong>Type in Dish Details:</strong>
-    </div>
-    <div class="p-3">
-      <label>Name:</label>
-      <input type="text" class="form-control" id="name">
-    </div>
-    <div class="row p-3">
-      <div class="col">
-        <label>Cooking time:</label>
-        <input type="text" class="form-control" id="cooking_time" style="max-width: 200px;">
+<div class="row">
+      <div class="col-2 justify-content-left">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-dark" href=#>• Back to main</a></li>
+        </ul>
       </div>
-      <div class="col">
-        <label>Prep time:</label>
-        <input type="text" class="form-control" id="prep_time" style="max-width: 200px;">
+      <div class="col-10">
+        <form>
+          <div class="card" style="max-width: 60%;">
+            <div class="card-header">
+              <strong>Type in Dish Details:</strong>
+            </div>
+            <div class="p-3">
+              <label>Name:</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="row p-3">
+              <div class="col">
+                <label>Cooking time:</label>
+                <input type="text" class="form-control" id="cooking_time" style="max-width: 200px;">
+              </div>
+              <div class="col">
+                <label>Prep time:</label>
+                <input type="text" class="form-control" id="prep_time" style="max-width: 200px;">
+              </div>
+            </div>
+            <div class="p-3 pb-5">
+              <button class="btn btn-primary" id="add_dish">Add Dish</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </div>
-    <div class="p-3 pb-5">
-      <button class="btn btn-primary" id="add_dish">Add Dish</button>
-    </div>
-  </div>
-</form>
+</div>
 {% endblock %}

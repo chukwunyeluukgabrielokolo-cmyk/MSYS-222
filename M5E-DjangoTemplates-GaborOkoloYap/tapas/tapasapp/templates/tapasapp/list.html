@@ -2,25 +2,34 @@
 {% load static %}
 
                 {% block content %}
-                <div class="col-12">
-                    <table class="table table-striped">
-                        <thead >
-                            <tr>
-                                <th class="table-dark" scope="col"> Name </th>
-                                <th class="table-dark" scope="col"> Cooking Time </th>
-                                <th class="table-dark" scope="col"> Prep Time </th>    
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for d in dishes %}
-                            <tr>
-                                <td> {{ d.name }} </td>
-                                <td> {{ d.prep_time }} </td>
-                                <td> {{ d.cook_time }} </td>
-                            </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+                    <div class="row">
+                        <div class="col-2 justify-content-left">
+                            <ul class="nav flex-column">
+                                <li class="nav-item"><a class="nav-link text-dark" href="#">· View Wines</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#">· View Large Dishes</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="#">· View Coursed Menus</a></li>
+                            </ul>
+                        </div>
+                    <div class="col-10 justify-content-center">
+                        <table class="table table-striped">
+                            <thead >
+                                <tr>
+                                    <th class="table-dark" scope="col"> Name </th>
+                                    <th class="table-dark" scope="col"> Cooking Time </th>
+                                    <th class="table-dark" scope="col"> Prep Time </th>    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for d in dishes %}
+                                <tr>
+                                    <td> {{ d.name }} </td>
+                                    <td> {{ d.prep_time }} </td>
+                                    <td> {{ d.cook_time }} </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 {% endblock %}
 
